@@ -284,7 +284,7 @@ class CreateController extends AbstractController
      * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
      * @param \Symfony\Component\HttpFoundation\Request $request
      *
-     * @return \Generated\Shared\Transfer\QuoteTransfer\
+     * @return \Generated\Shared\Transfer\QuoteTransfer
      */
     protected function executeQuoteExpanderPlugins(QuoteTransfer $quoteTransfer, Request $request): QuoteTransfer
     {
