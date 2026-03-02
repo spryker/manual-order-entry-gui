@@ -25,10 +25,6 @@ class CustomersListDataProvider implements FormDataProviderInterface
      */
     protected $request;
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\QueryContainer\ManualOrderEntryGuiToCustomerQueryContainerInterface $customerQueryContainer
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     */
     public function __construct(
         ManualOrderEntryGuiToCustomerQueryContainerInterface $customerQueryContainer,
         Request $request
@@ -74,9 +70,6 @@ class CustomersListDataProvider implements FormDataProviderInterface
         return $transfer;
     }
 
-    /**
-     * @return array
-     */
     protected function getCustomerList(): array
     {
         /** @var array<\Orm\Zed\Customer\Persistence\SpyCustomer> $customerCollection */

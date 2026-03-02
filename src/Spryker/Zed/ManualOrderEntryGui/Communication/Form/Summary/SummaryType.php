@@ -30,11 +30,6 @@ class SummaryType extends AbstractType
      */
     public const FIELD_IS_SUBMIT_ORDER = 'isSubmitOrder';
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
     }
@@ -72,9 +67,6 @@ class SummaryType extends AbstractType
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return static::TYPE_NAME;

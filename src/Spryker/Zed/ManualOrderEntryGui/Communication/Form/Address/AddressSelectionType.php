@@ -28,11 +28,6 @@ class AddressSelectionType extends AddressType
      */
     public const OPTION_ADDRESS_CHOICES = 'addresses_choices';
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         parent::configureOptions($resolver);

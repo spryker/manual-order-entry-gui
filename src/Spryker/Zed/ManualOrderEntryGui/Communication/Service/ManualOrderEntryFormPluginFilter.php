@@ -112,55 +112,26 @@ class ManualOrderEntryFormPluginFilter
         return $skippedPlugins;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return bool
-     */
     protected function isShowNext(Request $request): bool
     {
         return $request->get($this->nextStepName) !== null;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return bool
-     */
     protected function isShowPrevious(Request $request): bool
     {
         return $request->get($this->previousStepName) !== null;
     }
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Communication\Plugin\ManualOrderEntryFormPluginInterface $formPlugin
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     protected function isFormPreFilled(ManualOrderEntryFormPluginInterface $formPlugin, QuoteTransfer $quoteTransfer): bool
     {
         return $formPlugin->isFormPreFilled($quoteTransfer);
     }
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Communication\Plugin\ManualOrderEntryFormPluginInterface $formPlugin
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return bool
-     */
     protected function isFormSubmitted(ManualOrderEntryFormPluginInterface $formPlugin, Request $request): bool
     {
         return $request->get($formPlugin->getName()) !== null;
     }
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Communication\Plugin\ManualOrderEntryFormPluginInterface $formPlugin
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     protected function isFormSkipped(ManualOrderEntryFormPluginInterface $formPlugin, Request $request, QuoteTransfer $quoteTransfer): bool
     {
         return $formPlugin->isFormSkipped($request, $quoteTransfer);
@@ -198,23 +169,11 @@ class ManualOrderEntryFormPluginFilter
         return $filteredPlugins;
     }
 
-    /**
-     * @param bool $isShowNext
-     * @param bool $isPreviousFormPreFilled
-     *
-     * @return bool
-     */
     protected function isPluginFiltered(bool $isShowNext, bool $isPreviousFormPreFilled): bool
     {
         return $isShowNext || $isPreviousFormPreFilled;
     }
 
-    /**
-     * @param bool $isFormSubmitted
-     * @param bool $isFormPreFilled
-     *
-     * @return bool
-     */
     protected function isBreakPluginSearch(bool $isFormSubmitted, bool $isFormPreFilled): bool
     {
         return !$isFormSubmitted && !$isFormPreFilled;

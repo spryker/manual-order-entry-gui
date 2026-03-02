@@ -19,9 +19,6 @@ class OrderSourceListDataProvider implements FormDataProviderInterface
      */
     protected $manualOrderEntryFacade;
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToManualOrderEntryFacadeInterface $manualOrderEntryFacade
-     */
     public function __construct(
         ManualOrderEntryGuiToManualOrderEntryFacadeInterface $manualOrderEntryFacade
     ) {

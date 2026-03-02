@@ -49,11 +49,6 @@ class OrderSourceListType extends AbstractType
         );
     }
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver
@@ -79,9 +74,6 @@ class OrderSourceListType extends AbstractType
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return static::TYPE_NAME;

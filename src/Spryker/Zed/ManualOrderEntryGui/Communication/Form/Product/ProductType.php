@@ -35,11 +35,6 @@ class ProductType extends AbstractType
      */
     protected const ERROR_MESSAGE_QUANTITY = 'Invalid Quantity.';
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
@@ -129,9 +124,6 @@ class ProductType extends AbstractType
         return $validationGroup;
     }
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return 'product';

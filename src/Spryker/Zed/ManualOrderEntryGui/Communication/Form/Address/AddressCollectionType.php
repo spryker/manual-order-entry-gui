@@ -55,11 +55,6 @@ class AddressCollectionType extends AbstractType
 
     public const GROUP_BILLING_ADDRESS = self::FIELD_BILLING_ADDRESS;
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
@@ -173,9 +168,6 @@ class AddressCollectionType extends AbstractType
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return static::TYPE_NAME;

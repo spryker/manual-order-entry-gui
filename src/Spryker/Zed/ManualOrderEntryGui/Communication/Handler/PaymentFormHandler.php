@@ -66,11 +66,6 @@ class PaymentFormHandler implements FormHandlerInterface
         return $quoteTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\CalculableObjectTransfer
-     */
     protected function createCalculableObjectTransfer(QuoteTransfer $quoteTransfer): CalculableObjectTransfer
     {
         $calculableObjectTransfer = new CalculableObjectTransfer();

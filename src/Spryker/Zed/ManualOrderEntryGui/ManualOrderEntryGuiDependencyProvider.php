@@ -116,11 +116,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
      */
     public const PLUGINS_QUOTE_EXPANDER = 'PLUGINS_QUOTE_EXPANDER';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideCommunicationLayerDependencies($container);
@@ -145,11 +140,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCustomerFacade(Container $container): Container
     {
         $container->set(static::FACADE_CUSTOMER, function (Container $container) {
@@ -159,11 +149,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addProductFacade(Container $container): Container
     {
         $container->set(static::FACADE_PRODUCT, function (Container $container) {
@@ -173,11 +158,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCartFacade(Container $container): Container
     {
         $container->set(static::FACADE_CART, function (Container $container) {
@@ -187,11 +167,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addDiscountFacade(Container $container): Container
     {
         $container->set(static::FACADE_DISCOUNT, function (Container $container) {
@@ -201,11 +176,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCurrencyFacade(Container $container): Container
     {
         $container->set(static::FACADE_CURRENCY, function (Container $container) {
@@ -215,11 +185,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMessengerFacade(Container $container): Container
     {
         $container->set(static::FACADE_MESSENGER, function (Container $container) {
@@ -229,11 +194,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addShipmentFacade(Container $container): Container
     {
         $container->set(static::FACADE_SHIPMENT, function (Container $container) {
@@ -243,11 +203,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addStoreFacade(Container $container): Container
     {
         $container->set(static::FACADE_STORE, function (Container $container) {
@@ -257,11 +212,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMoneyFacade(Container $container): Container
     {
         $container->set(static::FACADE_MONEY, function (Container $container) {
@@ -271,11 +221,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addPaymentFacade(Container $container): Container
     {
         $container->set(static::FACADE_PAYMENT, function (Container $container) {
@@ -285,11 +230,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCheckoutFacade(Container $container): Container
     {
         $container->set(static::FACADE_CHECKOUT, function (Container $container) {
@@ -299,11 +239,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCalculationFacade(Container $container): Container
     {
         $container->set(static::FACADE_CALCULATION, function (Container $container) {
@@ -313,11 +248,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addManualOrderEntryFacade(Container $container): Container
     {
         $container->set(static::FACADE_MANUAL_ORDER_ENTRY, function (Container $container) {
@@ -327,11 +257,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addPaymentSubFormPlugins(Container $container): Container
     {
         $container->set(static::PAYMENT_SUB_FORMS, function () {
@@ -349,11 +274,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return [];
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCustomerQueryContainer(Container $container): Container
     {
         $container->set(static::QUERY_CONTAINER_CUSTOMER, function (Container $container) {
@@ -363,11 +283,6 @@ class ManualOrderEntryGuiDependencyProvider extends AbstractBundleDependencyProv
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addManualOrderEntryFormPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_MANUAL_ORDER_ENTRY_FORM, function (Container $container) {

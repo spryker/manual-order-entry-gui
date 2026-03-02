@@ -27,10 +27,6 @@ class SummaryDataProvider implements FormDataProviderInterface
      */
     protected $messengerFacade;
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToCalculationFacadeInterface $calculationFacade
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToMessengerFacadeInterface $messengerFacade
-     */
     public function __construct(
         ManualOrderEntryGuiToCalculationFacadeInterface $calculationFacade,
         ManualOrderEntryGuiToMessengerFacadeInterface $messengerFacade

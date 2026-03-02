@@ -153,11 +153,6 @@ class PaymentType extends AbstractType
         return $paymentMethodSubForms;
     }
 
-    /**
-     * @param array $paymentMethodSubForms
-     *
-     * @return array
-     */
     protected function getPaymentMethodChoices(array $paymentMethodSubForms): array
     {
         $choices = [];
@@ -171,21 +166,11 @@ class PaymentType extends AbstractType
         return $choices;
     }
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGuiExtension\Dependency\Plugin\PaymentSubFormPluginInterface $paymentMethodSubForm
-     *
-     * @return \Spryker\Zed\Kernel\Communication\Form\AbstractType
-     */
     protected function createSubForm(PaymentSubFormPluginInterface $paymentMethodSubForm): AbstractType
     {
         return $paymentMethodSubForm->createSubForm();
     }
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
@@ -203,9 +188,6 @@ class PaymentType extends AbstractType
         $resolver->setRequired(static::OPTIONS_FIELD_NAME);
     }
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return static::TYPE_NAME;

@@ -13,17 +13,8 @@ use Symfony\Component\HttpFoundation\Request;
 
 interface ManualOrderEntryFormPluginInterface
 {
-    /**
-     * @return string
-     */
     public function getName(): string;
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Symfony\Component\Form\FormInterface
-     */
     public function createForm(Request $request, QuoteTransfer $quoteTransfer): FormInterface;
 
     /**
@@ -35,18 +26,7 @@ interface ManualOrderEntryFormPluginInterface
      */
     public function handleData(QuoteTransfer $quoteTransfer, &$form, Request $request): QuoteTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     public function isFormPreFilled(QuoteTransfer $quoteTransfer): bool;
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     public function isFormSkipped(Request $request, QuoteTransfer $quoteTransfer): bool;
 }

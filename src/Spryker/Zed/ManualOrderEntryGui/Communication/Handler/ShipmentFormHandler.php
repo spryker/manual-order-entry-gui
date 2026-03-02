@@ -23,9 +23,6 @@ class ShipmentFormHandler implements FormHandlerInterface
      */
     protected $shipmentFacade;
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToShipmentFacadeInterface $shipmentFacade
-     */
     public function __construct(
         ManualOrderEntryGuiToShipmentFacadeInterface $shipmentFacade
     ) {
@@ -58,11 +55,6 @@ class ShipmentFormHandler implements FormHandlerInterface
         return $quoteTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ShipmentMethodTransfer $shipmentMethodTransfer
-     *
-     * @return \Generated\Shared\Transfer\ExpenseTransfer
-     */
     protected function createShippingExpenseTransfer(ShipmentMethodTransfer $shipmentMethodTransfer): ExpenseTransfer
     {
         $shipmentExpenseTransfer = new ExpenseTransfer();

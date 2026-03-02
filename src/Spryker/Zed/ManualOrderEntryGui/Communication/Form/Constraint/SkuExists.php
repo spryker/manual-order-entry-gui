@@ -22,17 +22,11 @@ class SkuExists extends SymfonyConstraint
      */
     protected $productFacade;
 
-    /**
-     * @return \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToProductFacadeInterface
-     */
     public function getProductFacade(): ManualOrderEntryGuiToProductFacadeInterface
     {
         return $this->productFacade;
     }
 
-    /**
-     * @return string
-     */
     public function getTargets(): string
     {
         return static::CLASS_CONSTRAINT;

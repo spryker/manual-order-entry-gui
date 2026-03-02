@@ -40,11 +40,6 @@ class ItemCollectionType extends AbstractType
      */
     public const OPTION_ISO_CODE = 'isoCode';
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setRequired(static::OPTION_ITEM_CLASS_COLLECTION);
@@ -87,9 +82,6 @@ class ItemCollectionType extends AbstractType
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return static::TYPE_NAME;

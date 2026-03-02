@@ -30,11 +30,6 @@ class VoucherType extends AbstractType
      */
     public const FIELD_VOUCHER_CODE = 'voucherCode';
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
     }
@@ -68,9 +63,6 @@ class VoucherType extends AbstractType
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return static::TYPE_NAME;

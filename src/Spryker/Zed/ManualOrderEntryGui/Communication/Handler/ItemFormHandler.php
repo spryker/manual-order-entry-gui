@@ -26,10 +26,6 @@ class ItemFormHandler implements FormHandlerInterface
      */
     protected $messengerFacade;
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToCartFacadeInterface $cartFacade
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToMessengerFacadeInterface $messengerFacade
-     */
     public function __construct(
         ManualOrderEntryGuiToCartFacadeInterface $cartFacade,
         ManualOrderEntryGuiToMessengerFacadeInterface $messengerFacade
@@ -61,11 +57,6 @@ class ItemFormHandler implements FormHandlerInterface
         return $quoteTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     protected function updateItems(QuoteTransfer $quoteTransfer): QuoteTransfer
     {
         $quoteTransfer->getManualOrder()->setItems(new ArrayObject());

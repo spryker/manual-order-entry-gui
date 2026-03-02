@@ -67,11 +67,6 @@ class ShipmentDataProvider implements FormDataProviderInterface
         return $transfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return array
-     */
     protected function getShipmentMethodList(QuoteTransfer $quoteTransfer): array
     {
         if (!$quoteTransfer->getStore() || !$quoteTransfer->getCurrency()) {
@@ -95,11 +90,6 @@ class ShipmentDataProvider implements FormDataProviderInterface
         return $shipmentMethodList;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\ShipmentMethodsTransfer
-     */
     protected function resolveShipmentMethods(QuoteTransfer $quoteTransfer): ShipmentMethodsTransfer
     {
         $this->setItemLevelEmptyShipmentFromQuote($quoteTransfer);

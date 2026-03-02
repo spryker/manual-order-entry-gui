@@ -163,11 +163,6 @@ class CreateController extends AbstractController
         ]);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\CheckoutResponseTransfer
-     */
     protected function createOrder(QuoteTransfer $quoteTransfer): CheckoutResponseTransfer
     {
         $checkoutResponseTransfer = $this->getFactory()
@@ -183,11 +178,6 @@ class CreateController extends AbstractController
         return $checkoutResponseTransfer;
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormInterface $customerForm
-     *
-     * @return \Generated\Shared\Transfer\CustomerResponseTransfer
-     */
     protected function registerCustomer(FormInterface $customerForm): CustomerResponseTransfer
     {
         $customerTransfer = $this->getCustomerTransferFromForm($customerForm);
@@ -199,11 +189,6 @@ class CreateController extends AbstractController
         return $customerResponseTransfer;
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormInterface $customerForm
-     *
-     * @return \Generated\Shared\Transfer\CustomerTransfer
-     */
     protected function getCustomerTransferFromForm(FormInterface $customerForm): CustomerTransfer
     {
         /** @var \Generated\Shared\Transfer\CustomerTransfer $customerTransfer */
@@ -214,12 +199,6 @@ class CreateController extends AbstractController
         return $customerTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return string
-     */
     protected function createRedirectUrlAfterUserCreation(CustomerTransfer $customerTransfer, Request $request): string
     {
         $params = $request->query->all();
@@ -232,12 +211,6 @@ class CreateController extends AbstractController
             ->build();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\SaveOrderTransfer $saveOrderTransfer
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return string
-     */
     protected function createRedirectUrlAfterOrderCreation(SaveOrderTransfer $saveOrderTransfer, Request $request): string
     {
         $redirectUrl = $request->get(static::PARAM_REDIRECT_URL);
@@ -252,11 +225,6 @@ class CreateController extends AbstractController
         )->build();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerResponseTransfer $customerResponseTransfer
-     *
-     * @return void
-     */
     protected function processResponseErrors(CustomerResponseTransfer $customerResponseTransfer): void
     {
         foreach ($customerResponseTransfer->getErrors() as $errorTransfer) {
@@ -264,11 +232,6 @@ class CreateController extends AbstractController
         }
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     protected function getInitialQuote(Request $request): QuoteTransfer
     {
         $quoteTransfer = new QuoteTransfer();

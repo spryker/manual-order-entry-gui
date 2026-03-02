@@ -27,9 +27,6 @@ class StoreFormHandler implements FormHandlerInterface
      */
     protected $currencyFacade;
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToCurrencyFacadeInterface $currencyFacade
-     */
     public function __construct(
         ManualOrderEntryGuiToCurrencyFacadeInterface $currencyFacade
     ) {

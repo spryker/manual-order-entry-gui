@@ -75,9 +75,6 @@ class CustomerType extends AbstractType
         return $this;
     }
 
-    /**
-     * @return array
-     */
     protected function getSalutationChoices(): array
     {
         return [
@@ -143,9 +140,6 @@ class CustomerType extends AbstractType
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return 'customer';

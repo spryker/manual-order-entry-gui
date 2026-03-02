@@ -41,11 +41,6 @@ class ProductCollectionType extends AbstractType
      */
     public const OPTION_PRODUCT_CLASS_COLLECTION = 'OPTION_PRODUCT_CLASS_COLLECTION';
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setRequired(static::OPTION_PRODUCT_CLASS_COLLECTION);
@@ -103,9 +98,6 @@ class ProductCollectionType extends AbstractType
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return static::TYPE_NAME;

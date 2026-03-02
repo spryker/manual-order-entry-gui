@@ -64,11 +64,6 @@ class ItemType extends AbstractType
      */
     protected const PATTERN_MONEY = '/^\d*\.?\d{0,2}$/';
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefined(static::OPTION_ISO_CODE);
@@ -264,9 +259,6 @@ class ItemType extends AbstractType
         }
     }
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return 'product';

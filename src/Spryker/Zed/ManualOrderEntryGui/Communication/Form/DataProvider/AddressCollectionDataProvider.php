@@ -24,9 +24,6 @@ class AddressCollectionDataProvider implements FormDataProviderInterface
      */
     protected $customerTransfer;
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToStoreFacadeInterface $storeFacade
-     */
     public function __construct(ManualOrderEntryGuiToStoreFacadeInterface $storeFacade)
     {
         $this->storeFacade = $storeFacade;
@@ -67,11 +64,6 @@ class AddressCollectionDataProvider implements FormDataProviderInterface
         ];
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\AddressTransfer
-     */
     protected function getShippingAddress(QuoteTransfer $quoteTransfer): AddressTransfer
     {
         $shippingAddressTransfer = new AddressTransfer();
@@ -88,11 +80,6 @@ class AddressCollectionDataProvider implements FormDataProviderInterface
         return $shippingAddressTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\AddressTransfer
-     */
     protected function getBillingAddress(QuoteTransfer $quoteTransfer): AddressTransfer
     {
         $billingAddressTransfer = new AddressTransfer();
@@ -109,9 +96,6 @@ class AddressCollectionDataProvider implements FormDataProviderInterface
         return $billingAddressTransfer;
     }
 
-    /**
-     * @return array
-     */
     protected function getAddressChoices(): array
     {
         if ($this->customerTransfer === null) {
@@ -141,9 +125,6 @@ class AddressCollectionDataProvider implements FormDataProviderInterface
         return $choices;
     }
 
-    /**
-     * @return array
-     */
     protected function getAvailableCountries(): array
     {
         $countries = [];

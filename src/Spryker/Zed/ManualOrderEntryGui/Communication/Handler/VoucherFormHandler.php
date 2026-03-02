@@ -20,9 +20,6 @@ class VoucherFormHandler implements FormHandlerInterface
      */
     protected $cartFacade;
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToCartFacadeInterface $cartFacade
-     */
     public function __construct(
         ManualOrderEntryGuiToCartFacadeInterface $cartFacade
     ) {

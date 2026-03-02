@@ -20,9 +20,6 @@ class StoreDataProvider implements FormDataProviderInterface
      */
     protected $currencyFacade;
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToCurrencyFacadeInterface $currencyFacade
-     */
     public function __construct(
         ManualOrderEntryGuiToCurrencyFacadeInterface $currencyFacade
     ) {
@@ -68,9 +65,6 @@ class StoreDataProvider implements FormDataProviderInterface
         return $transfer;
     }
 
-    /**
-     * @return array
-     */
     protected function getStoreList(): array
     {
         $storeWithCurrencyTransfers = $this->currencyFacade->getAllStoresWithCurrencies();

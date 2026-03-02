@@ -27,10 +27,6 @@ class ProductFormHandler implements FormHandlerInterface
      */
     protected $productFacade;
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToCartFacadeInterface $cartFacade
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToProductFacadeInterface $productFacade
-     */
     public function __construct(
         ManualOrderEntryGuiToCartFacadeInterface $cartFacade,
         ManualOrderEntryGuiToProductFacadeInterface $productFacade

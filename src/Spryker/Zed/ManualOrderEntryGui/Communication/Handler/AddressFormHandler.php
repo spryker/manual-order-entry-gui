@@ -18,9 +18,6 @@ class AddressFormHandler implements FormHandlerInterface
      */
     protected $customerFacade;
 
-    /**
-     * @param \Spryker\Zed\ManualOrderEntryGui\Dependency\Facade\ManualOrderEntryGuiToCustomerFacadeInterface $customerFacade
-     */
     public function __construct(
         ManualOrderEntryGuiToCustomerFacadeInterface $customerFacade
     ) {

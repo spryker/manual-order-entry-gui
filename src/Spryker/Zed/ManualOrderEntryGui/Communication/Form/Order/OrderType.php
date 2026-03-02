@@ -20,9 +20,6 @@ class OrderType extends AbstractType
      */
     public const TYPE_NAME = 'order';
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return static::TYPE_NAME;
