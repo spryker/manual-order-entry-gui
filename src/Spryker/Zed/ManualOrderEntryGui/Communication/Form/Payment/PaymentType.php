@@ -118,9 +118,12 @@ class PaymentType extends AbstractType
     protected function addPaymentMethodSubForms(FormBuilderInterface $builder, array $paymentMethodSubForms, array $options)
     {
         foreach ($paymentMethodSubForms as $paymentMethodSubForm) {
+            /** @var \Symfony\Component\Form\FormTypeInterface $subForm */
+            $subForm = $paymentMethodSubForm[static::KEY_SUBFORM];
+
             $builder->add(
                 $paymentMethodSubForm[static::KEY_PLUGIN]->getName(),
-                get_class($paymentMethodSubForm[static::KEY_SUBFORM]) ?: null,
+                get_class($subForm) ?: null,
                 [
                     'property_path' => static::PAYMENT_PROPERTY_PATH . '.' . $paymentMethodSubForm[static::KEY_PLUGIN]->getPropertyPath(),
                     'error_bubbling' => true,
