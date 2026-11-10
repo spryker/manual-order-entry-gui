@@ -7,9 +7,9 @@
 
 namespace Spryker\Shared\ManualOrderEntryGui;
 
-use Spryker\Shared\Kernel\AbstractBundleConfig;
+use Spryker\Shared\Kernel\AbstractSharedConfig;
 
-class ManualOrderEntryGuiConfig extends AbstractBundleConfig
+class ManualOrderEntryGuiConfig extends AbstractSharedConfig
 {
     /**
      * Specification:
